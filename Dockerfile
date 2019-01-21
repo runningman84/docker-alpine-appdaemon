@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.8
 MAINTAINER Philipp Hellmich <phil@hellmi.de>
 
 ARG UID=1000
