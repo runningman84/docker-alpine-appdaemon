@@ -8,10 +8,9 @@ RUN apk add --no-cache tini python3 python3-dev py-requests git curl libffi-dev 
     addgroup -g ${GUID} hass && \
     adduser -D -G hass -s /bin/sh -u ${UID} hass && \
     pip3 install --upgrade pip && \
-    pip3 install appdaemon && \
-    mkdir -p /usr/src/app
+    pip3 install appdaemon
 
-WORKDIR /usr/src/app
+WORKDIR /config
 VOLUME /config
 
 ENTRYPOINT ["/sbin/tini"]
