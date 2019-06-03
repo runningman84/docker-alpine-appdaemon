@@ -13,6 +13,6 @@ RUN apk add --no-cache tini python3 python3-dev py-requests git curl libffi-dev 
 WORKDIR /config
 VOLUME /config
 
-ENTRYPOINT ["/sbin/tini"]
+ENTRYPOINT ["/sbin/tini", "--"]
 
 CMD [ "appdaemon", "-c", "/config" ]
