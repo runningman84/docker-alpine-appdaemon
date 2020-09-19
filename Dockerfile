@@ -5,7 +5,7 @@ ARG UID=1000
 ARG GUID=1000
 ARG VERSION=4.0.5
 
-RUN apk add --no-cache tini python3 python3-dev py-requests git curl libffi-dev build-base py3-cffi && \
+RUN apk add --no-cache tini python3 python3-dev openssl-dev py-requests git curl libffi-dev build-base py3-cffi && \
     addgroup -g ${GUID} hass && \
     adduser -D -G hass -s /bin/sh -u ${UID} hass && \
     pip3 install --upgrade pip && \
